@@ -2,25 +2,18 @@
 :end-before: <!-- include-before -->
 ```
 
-{% if build == "slides" %}
-:::{admonition} Authors
-:class: note, margin
-Dr. Jonas I. Liechti  
-Dr. Matteo Delucchi
-:::
+This is <img src="./_static/T4D_logo.svg" alt="T4D" width="25" height="25">'s take on efficiently working with an HPC Cluster.
 
-{% else %}
+
 ### Authors
 
-**Dr. Jonas I. Liechti**  
-**Dr. Matteo Delucchi**  
-{% endif %}
+**Dr. [Jonas I. Liechti](https://github.com/j-i-l)**  
+**Dr. [Matteo Delucchi](https://github.com/matteodelucchi)**  
 
 
-### Content
 ```{toctree}
-:maxdepth: {% if build == "slides" %}1{% else %}4{% endif %}
-{% if build == "slides" %}:numbered:{% endif %}
+:hidden:
 
 content/index
 ```
+
