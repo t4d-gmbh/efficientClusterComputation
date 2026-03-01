@@ -12,6 +12,7 @@ Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingShare
 :maxdepth: 1
 
 ./clusterSetup
+./sharedParallelFilesystem
 ./nodeArchitecture
 ./featuresAndLimitations
 ./interaction
@@ -22,6 +23,8 @@ Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingShare
 <!-- BUILDING THE PAGES -->
 
 ```{include} ./clusterSetup.md
+```
+```{include} ./sharedParallelFilesystem.md
 ```
 ```{include} ./nodeArchitecture.md
 ```

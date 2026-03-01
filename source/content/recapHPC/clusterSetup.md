@@ -1,8 +1,4 @@
-{% if build == "slides" %}
-# The HPC Cluster
-{% else %}
-## The HPC Cluster at a Glance
-{% endif %}
+## The HPC Cluster
 
 ```{figure} ./../_static/slurmCluster.png
 :alt: Slurm Cluster Schema
