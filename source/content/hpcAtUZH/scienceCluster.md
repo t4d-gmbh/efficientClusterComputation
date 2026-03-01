@@ -3,29 +3,51 @@
 {% if slide %}
 
 ```{admonition} <i class="fa-solid fa-circle-info"></i> Full specs
-:class: margin
+:class: margin tip
 [docs.s3it.uzh.ch/cluster/resources](https://docs.s3it.uzh.ch/cluster/resources/)
 ```
 
 {% endif %}
 
-{% if slide %}:::{card}{% else %}###{% endif %} <i class="fa-solid fa-microchip"></i> Hardware
+{% if slide %}:::::::{card}{% else %}###{% endif %} <i class="fa-solid fa-microchip"></i> Hardware
 {% if slide %}
 
-:::::{grid} 1 1 3 3
+::::::{grid} 1 2 2 2
 :gutter: 2
 
-::::{grid-item-card} CPUs
+:::::{grid-item-card} CPUs
 AMD EPYC & Intel Xeon
-::::
-::::{grid-item-card} GPUs
-NVIDIA (various generations)
-::::
-::::{grid-item-card} Scale
-Multiple node types with varying core counts, memory, and GPU configurations
+
+- 8 - 288 CPU's per node
+- 30 - 2014 GB Ram per node
+:::::
+:::::{grid-item-card} Scale
+- ~60 CPU-only servers
+- ~30 GPU-nodes (15 are single-GPU)
+:::::
+:::::{grid-item-card} GPUs (NVIDIA)
+:columns: 12
+
+::::{grid} 2 2 2 2
+:gutter: 2
+
+:::{grid-item}
+_nvlink (no nvswitch)_
+- **A100** (_80GB_) **5x8** _(node)x(GPU per node)_
+- **H100** SXM (_80GB_) **2x8** / NVL (_96GB_) 4x2
+- **H200** (_140GB_) **1x8**
+:::
+:::{grid-item}
+_PCIe Gen 4_  
+- **L4** (_24GB_) **15x1**
+
+_PCIe Gen 3_  
+- **V100** (_32GB_) **5x8**
+:::
 ::::
 :::::
-:::
+::::::
+:::::::
 
 {% else %}
 
@@ -42,13 +64,13 @@ Check the [resources page](https://docs.s3it.uzh.ch/cluster/resources/) for the 
 
 {% endif %}
 
-{% if build == "slides" %}
+{% if slide %}
 ---
 {% else %}
 ### Software Stack
 {% endif %}
 
-{% if slide %}:::{card}{% else %}{% endif %} <i class="fa-solid fa-layer-group"></i> Software
+{% if slide %}::::{card}{% else %}{% endif %} <i class="fa-solid fa-layer-group"></i> Software
 {% if slide %}
 
 - **Slurm** — workload manager (job scheduling, resource allocation)
@@ -62,7 +84,7 @@ Docker requires root privileges and is therefore not available on shared cluster
 Apptainer (formerly Singularity) fills this gap: it runs containers in user space and integrates with Slurm.
 :::
 
-:::
+::::
 
 {% else %}
 

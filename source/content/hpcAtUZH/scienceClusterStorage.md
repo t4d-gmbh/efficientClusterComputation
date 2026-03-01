@@ -12,7 +12,7 @@
 {% if slide %}
 
 :::::{grid} 1 1 2 2
-:gutter: 3
+:gutter: 2
 
 ::::{grid-item-card} <i class="fa-solid fa-house"></i> `/home`
 :class-header: sd-bg-primary sd-bg-text-light
@@ -81,8 +81,17 @@ Because both areas rely on CephFS, every file operation traverses the network an
 Workloads that open thousands of small files (common during Python package imports or data loading with many individual files) can saturate the metadata layer.
 Strategies to mitigate this include:
 
-- Packing many small files into archives (e.g., `.tar`) before processing
-- Using containers (Apptainer) to bundle dependencies into a single image file
-- Staging data to node-local storage (if available) before computation
+::::{grid} 1 2 2 2
+:gutter: 2
+
+:::{grid-item}
+- Use [SquashFS](https://www.kernel.org/doc/html/latest/filesystems/squashfs.html) for read-only data.
+- Using containers (Apptainer) to bundle dependencies into a single image file.
+:::
+:::{grid-item}
+- Packing many small files into archives (e.g., `.tar`) before processing.
+- Staging data to node-local storage (if available) before computation.
+:::
+::::
 
 {% endif %}

@@ -19,25 +19,25 @@ A national-scale HPC facility operated by CSCS (Swiss National Supercomputing Ce
 
 {% endif %}
 
-{% if slide %}:::{card}{% else %}###{% endif %} <i class="fa-solid fa-gears"></i> Architecture
+{% if slide %}:::::{card}{% else %}###{% endif %} <i class="fa-solid fa-gears"></i> Architecture
 {% if slide %}
 
-:::::{grid} 1 1 2 2
+::::{grid} 1 1 2 2
 :gutter: 2
 
-::::{grid-item-card} Orchestration
+:::{grid-item-card} Orchestration
 - **Kubernetes** (bare-metal) for service management
 - **vCluster** for multi-tenant isolation
 - **Slurm** as the workload manager (familiar user interface)
-::::
-::::{grid-item-card} Software Environments
+:::
+:::{grid-item-card} Software Environments
 - **uenv** — SquashFS-based software stacks
 - Entire environment mounted as a read-only image
 - Avoids hitting the filesystem metadata server on every import
-::::
-:::::
-
 :::
+::::
+
+:::::
 
 {% else %}
 
