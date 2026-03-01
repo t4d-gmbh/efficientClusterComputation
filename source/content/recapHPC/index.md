@@ -1,0 +1,32 @@
+# <i class="fa-solid fa-rotate-left"></i> Recap: HPC Clusters
+
+```{admonition} Part 1 Refresher
+:class: tip, margin
+
+Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingSharedResources/).
+```
+
+{% if slide %}
+<!-- BUILDING THE SLIDES -->
+```{toctree}
+:maxdepth: 1
+
+./clusterSetup
+./nodeArchitecture
+./featuresAndLimitations
+./interaction
+```
+
+{% else %}
+<!-- BUILDING THE PAGES -->
+
+```{include} ./clusterSetup.md
+```
+```{include} ./nodeArchitecture.md
+```
+```{include} ./featuresAndLimitations.md
+```
+```{include} ./interaction.md
+```
+
+{% endif %}
