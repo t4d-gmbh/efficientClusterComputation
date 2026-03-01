@@ -15,6 +15,7 @@ Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingShare
 ./nodeArchitecture
 ./featuresAndLimitations
 ./interaction
+./sshSecurity
 ```
 
 {% else %}
@@ -27,6 +28,8 @@ Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingShare
 ```{include} ./featuresAndLimitations.md
 ```
 ```{include} ./interaction.md
+```
+```{include} ./sshSecurity.md
 ```
 
 {% endif %}
