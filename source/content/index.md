@@ -3,5 +3,6 @@
 :caption: Efficient Cluster Computation
 
 recapHPC/index
+hpcAtUZH/index
 ```
 
