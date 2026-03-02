@@ -4,5 +4,6 @@
 
 recapHPC/index
 hpcAtUZH/index
+specialTopics/index
 ```
 
