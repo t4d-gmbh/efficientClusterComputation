@@ -4,7 +4,7 @@ from setuptools_scm import get_version
 # -- Configuration parameter -------------------------------------------------
 # ----------------------------------------------------------------------------
 repository_owner = "T4D-GmbH"
-repository_name = "Efficient Cluster Computation"
+repository_name = "efficientClusterComputation"
 repository_branch = "main"
 # -- set the logo
 course_logo = {
