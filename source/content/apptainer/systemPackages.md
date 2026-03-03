@@ -1,4 +1,4 @@
-# Overcoming HPC Limits: System-Level Packages
+# System-Level Packages
 
 {% if slide %}
 **The Problem:** A lack of `sudo` privileges on clusters prevents the installation of system-level software (e.g., specific compilers, rendering engines).
@@ -14,19 +14,23 @@ Without `sudo` (root) privileges on the cluster, users cannot run commands like 
 **The Solution:** A container can be built with its own dedicated Operating System (e.g., Ubuntu), allowing required tools to be installed *inside* the container during the build phase.
 {% endif %}
 
-## Example: Installing GDAL
+:::{admonition} Example
+{.bigger}
+**Installing GDAL**
 
 {% if slide %}
 **GDAL:** A complex C++ library for processing geospatial data.
 
 **1. Definition File (`gdal_env.def`):**
-```apptainer
+```docker
 Bootstrap: docker
 From: ubuntu:24.04
 
 %post
     apt-get update -y
-    DEBIAN_FRONTEND=noninteractive apt-get install -y gdal-bin libgdal-dev
+    DEBIAN_FRONTEND=noninteractive \
+    apt-get install -y \
+    gdal-bin libgdal-dev
     apt-get clean
 
 ```
@@ -46,7 +50,7 @@ GDAL is a heavy, complex C++ library used for processing geospatial and satellit
 
 **`gdal_env.def`**
 
-```apptainer
+```docker
 Bootstrap: docker
 # A recent Ubuntu OS ensures compatibility with the cluster's kernel
 From: ubuntu:24.04
@@ -91,4 +95,4 @@ Size is 512, 512
 ```
 
 {% endif %}
-
+:::
