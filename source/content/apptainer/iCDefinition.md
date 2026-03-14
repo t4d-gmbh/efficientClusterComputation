@@ -97,9 +97,6 @@ apptainer exec --pwd /app \
 * `--bind "$(pwd):/app"`: Mounts the current host directory into the container's `/app` path.
   If run from the root of your SoC project this provides access to the `data/`, directory.
 
-A complete, production-ready example of such an "invisible" container definition can be found in the [T4D pythonProject template](https://github.com/j-i-l/pythonProject/blob/997c7e278ab02c02d7b861444a281d8364a3f1c7/containers/env.def).
-Furthermore, the template provides a fully configured [CI/CD workflow](https://github.com/j-i-l/pythonProject/blob/997c7e278ab02c02d7b861444a281d8364a3f1c7/.github/workflows/buildApptainerEnv.yml) that demonstrates how to automatically build the Apptainer image via GitHub Actions and publish it directly to a container registry.
-
 {% endif %}
 
 :::{admonition} Invisible Container Template
