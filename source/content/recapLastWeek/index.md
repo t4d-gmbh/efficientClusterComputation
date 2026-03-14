@@ -29,4 +29,9 @@ Revisiting core concepts from [Part 2](https://t4d-gmbh.github.io/researchSoftwa
 ```{toctree}
 :maxdepth: 1
 
+./projectStructure
+./separationOfConcerns
+./versionControl
+./designPrinciples
+./pythonGotcha
 ```
