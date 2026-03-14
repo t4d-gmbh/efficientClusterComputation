@@ -1,34 +1,43 @@
 ## Virtualization
 
 
-```{admonition} Remember the Manifest
-:class: tip margin
+::::{grid} 1 2 2 2
+:gutter: 2
 
-The **manifest** declares resource access and what to run.
-In Docker, the `Dockerfile` can contain both instructions for the image _and_ the manifest!
-```
-
-::::{grid}
-:gutter: 3
-
-:::{grid-item}
-:columns: 6
+:::{grid-item-card} Hardware Virtualization
 :class: sd-m-auto
 
 ```{image} ./../_static/hypervisor.png
 :alt: Hypervisor
-:width: 100%
+:align: center
+:width: 80%
 ```
+- Virtualizes the **complete software stack** of a computer.
+:::
+:::{grid-item-card} OS-level Virtualization
+:class: sd-m-auto
+
+```{image} ./../_static/containerSetup.png
+:alt: Container engine
+:align: center
+:width: 47%
+```
+- Virtualizes the **user space** alongside an existing kernel space.
 :::
 ::::
 
 ---
 
-::::{grid}
-:gutter: 3
+```{admonition} Remember the Manifest
+:class: tip margin
+
+The **manifest** declares resource access and what to run.
+```
+
+::::{grid} 1 2 2 2
+:gutter: 2
 
 :::{grid-item}
-:columns: 6
 :class: sd-m-auto
 
 ```{image} ./../_static/vm.png
@@ -37,7 +46,6 @@ In Docker, the `Dockerfile` can contain both instructions for the image _and_ th
 ```
 :::
 :::{grid-item}
-:columns: 6
 :class: sd-m-auto
 
 ```{image} ./../_static/container.png
