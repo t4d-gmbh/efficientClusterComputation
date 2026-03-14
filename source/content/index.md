@@ -4,9 +4,8 @@
 
 recapLastWeek/index
 recapExoHelloWorld/index
-{% if slide %}
 apptainerRunExecShell/index
-{% endif %}
+recapExoHelloWorld/solution
 recapHPC/index
 hpcAtUZH/index
 apptainer/index
