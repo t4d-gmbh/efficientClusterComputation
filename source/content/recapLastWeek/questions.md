@@ -5,8 +5,6 @@
 Before we continue — any open questions from Part 1?
 ```
 
-We covered a lot of ground last week. Let's make sure the foundations are solid before we build on them.
-
 :::::{grid} 2
 :gutter: 2
 
