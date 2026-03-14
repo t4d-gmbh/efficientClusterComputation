@@ -100,7 +100,7 @@ apptainer exec --pwd /app \
 {% endif %}
 
 :::{admonition} Invisible Container Template
-:class: tip
+:class: tip {% if slide %}margin{% endif %}
 
 An exemplary definition of such an "Invisible" container overlay can be found in [T4D's pythonProject template](https://github.com/j-i-l/pythonProject/blob/997c7e278ab02c02d7b861444a281d8364a3f1c7/containers/env.def) along with [a CI/CD workflow](https://github.com/j-i-l/pythonProject/blob/997c7e278ab02c02d7b861444a281d8364a3f1c7/.github/workflows/buildApptainerEnv.yml) to build and add the container to the GitHub registry.
 :::
