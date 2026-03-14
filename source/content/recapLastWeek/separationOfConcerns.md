@@ -10,10 +10,10 @@ Logic, parameters, environment, and data must never be tangled together.
 :gutter: 2
 
 ::::{grid-item-card} <i class="fa-solid fa-layer-group"></i> The 4 Pillars
-- **Environment** — `.env`, containers, `pyproject.toml`
-- **Configuration** — `config/` (YAML/TOML params)
-- **Code** — `src/` (reusable, stateless logic)
-- **Data** — `data/` (raw → interim → final)
+- **Environment**: `.env`, containers, `pyproject.toml`
+- **Configuration**: `config/` (YAML/TOML params)
+- **Code**: `src/` (reusable, stateless logic)
+- **Data**: `data/` (raw → interim → final)
 ::::
 
 ::::{grid-item-card} <i class="fa-solid fa-wand-magic-sparkles"></i> The Conductor

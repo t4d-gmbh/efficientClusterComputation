@@ -31,6 +31,7 @@ Revisiting core concepts from [Part 2](https://t4d-gmbh.github.io/researchSoftwa
 
 ./projectStructure
 ./separationOfConcerns
+./separationOfConcernsImg
 ./versionControl
 ./designPrinciples
 ./pythonGotcha
