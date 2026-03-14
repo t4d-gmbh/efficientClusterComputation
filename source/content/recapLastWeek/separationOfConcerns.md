@@ -30,6 +30,8 @@ No hardcoded paths. No embedded parameters. No mixed concerns.
 
 ::::{grid-item-card} ❌ Tangled
 ```python
+# /scripts/my_script.py
+...
 df = pd.read_csv("/home/me/data.csv")
 result = process(df, threshold=0.5)
 result.to_csv("/home/me/out.csv")
@@ -38,9 +40,11 @@ result.to_csv("/home/me/out.csv")
 
 ::::{grid-item-card} ✔ Drained
 ```python
-load_dotenv()
-data_path = os.getenv("DATA_PATH")
-cfg = yaml.safe_load(open("config/params.yml"))
+# /scripts/my_script.py
+...
+config_path = os.getenv.get("CONFIG_PATH", "./config/params.yml")
+data_path = os.getenv["DATA_PATH"]
+cfg = yaml.safe_load(open(config_path))
 df = pd.read_csv(data_path)
 result = process(df, **cfg)
 ```

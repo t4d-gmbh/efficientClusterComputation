@@ -1,6 +1,6 @@
 ## Distributed Storage
 
-:::::{grid} 2
+:::::{grid} 1 2 2 2
 :gutter: 2
 
 ::::{grid-item-card} Block Storage: _"The Virtual USB Drive"_

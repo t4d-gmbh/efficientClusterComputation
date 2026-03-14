@@ -30,8 +30,8 @@ Revisiting core concepts from [Part 2](https://t4d-gmbh.github.io/researchSoftwa
 :maxdepth: 1
 
 ./projectStructure
-./separationOfConcerns
 ./separationOfConcernsImg
+./separationOfConcerns
 ./versionControl
 ./designPrinciples
 ./pythonGotcha
