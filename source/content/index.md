@@ -5,7 +5,10 @@
 recapHPC/index
 hpcAtUZH/index
 apptainer/index
-{% if slide %} recapExoHelloWorld/index {% endif %}
+{% if slide %}
+recapExoHelloWorld/index
+apptainerRunExecShell/index
+{% endif %}
 specialTopics/index
 ```
 
