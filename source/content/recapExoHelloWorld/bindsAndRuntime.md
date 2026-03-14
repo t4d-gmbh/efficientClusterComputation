@@ -1,42 +1,53 @@
-# Binds & Runtime
+## Binds at Runtime
 
 :::{admonition} <i class="fa-solid fa-comments"></i> Discussion
-:class: attention
+:class-header: sd-bg-primary sd-bg-text-light
 
 **What `--bind` mounts were needed to run the script through the container?**
 :::
 
----
 
-:::::{grid} 2
+:::{admonition} Host's `PATH` is appended on runtime
+:class: note
+
+Apptainer will append the value of `PATH` of the host to `PATH` inside the container.
+
+Running `module load ...` on the host, `PATH` might contain references to `/apps/...`.
+If then `/apps` is bound, the **container might run binaries from the host** and not the container.
+
+{.centered}
+**This is needed if efficient usage of the network fabric is required** (e.g. RDMA).
+:::
+
+:::::{grid} 1 2 2 2
 :gutter: 2
 
-::::{grid-item-card} <i class="fas fa-link"></i> Typical Binds
+::::{grid-item-card} <i class="fas fa-gear"></i> Typical binds
+
 ```bash
---bind "$(pwd):/app"
+--bind "$(pwd)/data:/app/data"
 ```
-Mounts the project root into `/app` so the container can access `data/`, `config/`, and `scripts/` from the host.
+Mounts the project's data folder into `/app/data` so the container can read and write `data/`.
 
 Additional binds for HPC:
 ```bash
 --bind /scratch/<user>/results:data/final
 ```
 ::::
+::::{grid-item-card} <i class="fas fa-circle-info"></i> Control runtime binds
+Avoid unnecessary binds (e.g. `/home`)
 
-::::{grid-item-card} <i class="fas fa-terminal"></i> `run` vs `exec` vs `shell`
+Only bind input (config, data) and output (data) directories.
 
-| Mode | Use Case |
-|---|---|
-| `shell` | Interactive exploration & debugging |
-| `exec` | Run a specific command or script |
-| `run` | Execute the `%runscript` — **best for reproducibility** |
+Bind system libraries and executables (e.g. `/apps`) **only if needed**!
 
+:::{admonition} Binds overwrite content!
+:class: warning
+
+This will overwrite the `/app` folder inside the container (e.g. `app/src/`).
 ```bash
-# Recommended for batch jobs
-apptainer run --env-file .env \
-  --bind "$(pwd):/app" \
-  env.sif \
-  python scripts/say_hello.py
+--bind "$(pwd):/app"
 ```
+:::
 ::::
 :::::

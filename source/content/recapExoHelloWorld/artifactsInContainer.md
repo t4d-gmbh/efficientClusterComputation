@@ -1,8 +1,8 @@
-# What Goes Into the Container?
+## What goes into the container?
 
 **Which project artifacts ended up in `%files`?**
 
-:::::{grid} 2
+:::::{grid} 1 2 2 2
 :gutter: 2
 
 ::::{grid-item-card} <i class="fas fa-file-import"></i> Typically Included
@@ -28,5 +28,6 @@
 
 :::{admonition} Key Insight
 :class: tip
-With **Separation of Concerns**, the container primarily packages the **environment** (Python + dependencies) and the **code** (`src/`). Configuration and data are injected at runtime via `--env-file` and `--bind`.
+With **Separation of Concerns**, the container primarily packages the runtime **environment** (Python + dependencies) and the **code** (`src/`).
+Configuration and data can be injected at runtime via `--env-file` and `--bind`.
 :::

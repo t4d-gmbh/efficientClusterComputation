@@ -1,9 +1,9 @@
-# Building & Running Apptainer
+## Building & Running
 
 :::{admonition} <i class="fa-solid fa-comments"></i> Discussion
-:class: attention
+:class: note
 
-**Who managed to build and run Apptainer locally?**
+**Who managed to build and run the Apptainer container locally?**
 
 - With or without help?
 - Any issues encountered during setup?
@@ -11,22 +11,57 @@
 
 ---
 
-:::::{grid} 2
+:::::{grid} 1 2 2 2
 :gutter: 2
 
 ::::{grid-item-card} <i class="fas fa-check-circle"></i> Expected Workflow
-```bash
-# Build from the project root
-apptainer build env.sif containers/env.def
 
-# Verify it works
-apptainer shell env.sif
-```
+1. 📤 **Configure**  
+
+   ```apptainer
+   %files
+     pyproject.toml /app/
+     ...
+   %post
+     ...
+     uv pip install --no-cache --compile-bytecode .
+     ...
+   %environment
+     ...
+     export PATH="/opt/venv/bin:$PATH"
+     ...
+   %runscript
+     ...
+     exec "$@"
+   ```
+2. ⚙️ **Build**  
+   
+   Execute from the repository root, passing the manifest path:
+   
+   ```bash
+   apptainer build img.sif containers/pipeline.def
+   
+   ```
+3. 🚀 **Execute**  
+   Apptainer supports the `--env-file` option for runtime injection:
+   ```bash
+   apptainer run --env-file .env img.sif
+   ```
 ::::
+::::{grid-item-card} <i class="fas fa-circle-question"></i> In your case:
+:class: sd-m-auto
 
-::::{grid-item-card} <i class="fas fa-exclamation-triangle"></i> Common Pitfalls
-- `fakeroot` failures → use `--ignore-fakeroot-command`
-- `uv` tries to sync on runtime → set `UV_NO_SYNC=1`
-- Missing `.git/` → version extraction fails during build
+```{compound}
+{.centered}
+{.bigger}
+What files did you include?  
+
+What configuration step did you define?  
+
+Did you need `%environment` at all?  
+
+How can your container be run? `run`, `exec` or `shell`?  
+```
+
 ::::
 :::::

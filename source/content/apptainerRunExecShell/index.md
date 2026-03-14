@@ -7,5 +7,9 @@
 
 ./runExecShell
 ```
+{% else %}
+<!-- BUILDING THE PAGES -->
 
+```{include} ./runExecShell.md
+```
 {% endif %}
