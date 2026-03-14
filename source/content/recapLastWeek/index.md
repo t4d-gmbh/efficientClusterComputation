@@ -8,6 +8,7 @@
 Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingSharedResources/).
 ```
 
+{% if slide %}
 ```{toctree}
 :maxdepth: 1
 
@@ -17,6 +18,21 @@ Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingShare
 ./cluster
 ./storage
 ```
+{% else %}
+<!-- BUILDING THE PAGES -->
+
+```{include} ./questions.md
+```
+```{include} ./virtualization.md
+```
+```{include} ./cloud.md
+```
+```{include} ./cluster.md
+```
+```{include} ./storage.md
+```
+
+{% endif %}
 
 ## Recap the Afternoon
 
@@ -26,6 +42,7 @@ Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingShare
 Revisiting core concepts from [Part 2](https://t4d-gmbh.github.io/researchSoftwareEngineering/).
 ```
 
+{% if slide %}
 ```{toctree}
 :maxdepth: 1
 
@@ -36,3 +53,19 @@ Revisiting core concepts from [Part 2](https://t4d-gmbh.github.io/researchSoftwa
 ./designPrinciples
 ./pythonGotcha
 ```
+{% else %}
+<!-- BUILDING THE PAGES -->
+
+```{include} ./projectStructure.md
+```
+```{include} ./separationOfConcernsImg.md
+```
+```{include} ./separationOfConcerns.md
+```
+```{include} ./versionControl.md
+```
+```{include} ./designPrinciples.md
+```
+```{include} ./pythonGotcha.md
+```
+{% endif %}}
