@@ -1,9 +1,8 @@
 # `run` vs `exec` vs `shell`
 
-:::::{grid} 3
-:gutter: 2
+:::::{tab-set}
 
-::::{grid-item-card} <i class="fas fa-terminal"></i> `shell`
+::::{tab-item} <i class="fas fa-terminal"></i> shell
 **Interactive session**
 
 ```bash
@@ -15,7 +14,7 @@ Drops into a shell inside the container. Useful for exploring, debugging, and te
 *Use during development.*
 ::::
 
-::::{grid-item-card} <i class="fas fa-play"></i> `exec`
+::::{tab-item} <i class="fas fa-play"></i> exec
 **Run a specific command**
 
 ```bash
@@ -28,7 +27,7 @@ Executes exactly one command and exits. Good for ad-hoc tasks or when the image 
 *Use for one-off commands.*
 ::::
 
-::::{grid-item-card} <i class="fas fa-rocket"></i> `run`
+::::{tab-item} <i class="fas fa-rocket"></i> run
 **Execute the `%runscript`**
 
 ```bash
