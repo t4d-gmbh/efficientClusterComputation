@@ -77,3 +77,9 @@ pre, code {
 .smaller {
   font-size: 60%;
 }
+
+img.limit-width {
+    max-width: 700px; /* Replace with your desired maximum width */
+    width: 100%;      /* Ensures it shrinks responsively on mobile */
+    height: auto;     /* Maintains the aspect ratio */
+}
