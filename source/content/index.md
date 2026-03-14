@@ -7,6 +7,7 @@ recapExoHelloWorld/index
 apptainerRunExecShell/index
 recapExoHelloWorld/solution
 bindsInSoC/index
+recapExoHelloWorld/cicd
 recapHPC/index
 hpcAtUZH/index
 apptainer/index
