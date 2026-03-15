@@ -13,10 +13,13 @@ Everyone clicks through the creation of a VM together.
 
 :::{grid-item-card} 1. Launch Instance
 - Navigate to **Compute → Instances → Launch Instance**
-- Choose a **name**
+- Choose a **name** (e.g. `test<username>`)
 - Pick a **boot source** (image: `ubuntu-jammy-22.04`)
+  ```{admonition} "Create New Volume"
+  :class: tip
+  This allows you to create a persising block storage as boot volume.
+  ```
 - Select a **flavor** (e.g. `1cpu-4ram-hpcv3`)
-- Set **disk size** and check **block storage** options for the "home" disk
 :::
 
 :::{grid-item-card} 2. Network & Security
@@ -43,6 +46,11 @@ Use the built-in **Console** tab in the GUI for direct terminal access.
 - **Stop** the VM when not in use
 - **Delete** the instance when done
 - Verify that **block storage volumes** persist independently
+
+```{admonition} "Shelved Instances"
+:class: warning
+It does not matter if an instance runs or not **only shelved instances are not billed**.
+```
 :::
 ::::
 
