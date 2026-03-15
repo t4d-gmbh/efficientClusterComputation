@@ -13,7 +13,6 @@ Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingShare
 
 ./clusterSetup
 ./sharedParallelFilesystem
-./nodeArchitecture
 ./featuresAndLimitations
 ./interaction
 ./sshSecurity
@@ -25,8 +24,6 @@ Revisiting core concepts from [Part 1](https://t4d-gmbh.github.io/utilizingShare
 ```{include} ./clusterSetup.md
 ```
 ```{include} ./sharedParallelFilesystem.md
-```
-```{include} ./nodeArchitecture.md
 ```
 ```{include} ./featuresAndLimitations.md
 ```

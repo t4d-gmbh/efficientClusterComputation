@@ -9,8 +9,11 @@ recapExoHelloWorld/solution
 bindsInSoC/index
 recapExoHelloWorld/cicd
 recapExoHelloWorld/remoteExecution
+introScienceCloud/index
+primerAnsible/index
+{% if build == "slides" %}
+swiftObjectStorage/index
+{% endif %}
 recapHPC/index
-hpcAtUZH/index
 apptainer/index
-specialTopics/index
 ```

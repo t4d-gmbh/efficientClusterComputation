@@ -68,4 +68,4 @@ Revisiting core concepts from [Part 2](https://t4d-gmbh.github.io/researchSoftwa
 ```
 ```{include} ./pythonGotcha.md
 ```
-{% endif %}}
+{% endif %}
