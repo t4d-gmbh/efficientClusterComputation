@@ -15,5 +15,4 @@ swiftObjectStorage/index
 {% endif %}
 recapHPC/index
 apptainer/index
-specialTopics/index
 ```
