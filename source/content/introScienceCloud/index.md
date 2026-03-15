@@ -18,4 +18,10 @@ Operated by [S3IT](https://docs.s3it.uzh.ch/cloud2/overview/).
 
 {% else %}
 <!-- BUILDING THE PAGES -->
+```{include} ./specsUZHCloud.md
+```
+```{include} ./accessGUI.md
+```
+```{include} ./accessCLI.md
+```
 {% endif %}
