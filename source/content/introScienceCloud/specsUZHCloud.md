@@ -1,5 +1,5 @@
 {% if slide %}
-## WIP: UZH Science Cloud Overview
+## UZH Science Cloud Overview
 
 ```{admonition} <i class="fa-solid fa-circle-info"></i> Full documentation
 :class: margin tip
@@ -18,27 +18,22 @@ OpenStack-based IaaS
 
 - Managed by **S3IT** (UZH)
 - OpenStack cloud OS
-- **~XX vCPUs** / **~XX TB RAM** / **~XX GPUs**
+- **~10K vCPUs** / **~40 TB RAM** / **~200 GPUs**
 - [Multiple **flavors** (VM sizes) available](https://herd.science-it.uzh.ch/avail-flavors/avail-public-flavors.html)
 
 +++
 <i class="fa-solid fa-link"></i> [Cloud Overview](https://docs.s3it.uzh.ch/cloud2/overview/)
 ::::
 
-::::{grid-item-card} <i class="fa-solid fa-coins"></i> Approximate Yearly Costs
+::::{grid-item-card} <i class="fa-solid fa-coins"></i> Approximate Costs
 :class-header: sd-bg-info sd-bg-text-light
 
-Two example configurations
+Costs are not public
 
 ^^^
 
-| Config | Specs | ~CHF/year |
-|---|---|---|
-| **Standard** | 4 vCPU, 16 GB RAM, 100 GB | ~XXX |
-| **GPU** | 8 vCPU, 32 GB RAM, 1 GPU, 100 GB | ~XXX |
-
-Costs are approximate and depend on the specific flavor and allocation model.
-
++++
+<i class="fa-solid fa-link"></i> [Info on costs (internal)](https://www.zi.uzh.ch/en/teaching-and-research/science-it/about/terms-conditions.html)
 ::::
 :::::
 

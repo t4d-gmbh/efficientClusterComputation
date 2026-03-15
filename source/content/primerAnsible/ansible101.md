@@ -1,16 +1,23 @@
 ## Getting Started with Ansible
 
 {% if slide %}
+::::{grid} 1 2 2 2
+:gutter: 2
+
+:::{grid-item}
+
 **Core Concept & Installation**
 * **Agentless Architecture:** Operates exclusively over standard SSH.
 * **Declarative State:** Infrastructure state is defined using YAML syntax.
 
-**Installation:**
+:::
+:::{grid-item-card} Installation:
 ```bash
 python3 -m pip install ansible-core
 
 ```
-
+:::
+::::
 {% endif %}
 
 {% if page %}

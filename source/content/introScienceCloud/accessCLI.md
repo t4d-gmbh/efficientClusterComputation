@@ -15,16 +15,24 @@ The CLI enables the programmatic orchestration of cloud resources, mitigating th
 {% endif %}
 
 {% if slide %}
-::::{grid}
+:::::{grid}
 :gutter: 2
 
-:::{grid-item-card}{% else %}###{% endif %} Retrieving Authentication Credentials
+::::{grid-item-card}{% else %}###{% endif %} Retrieving Authentication Credentials
 
 {% if slide %}
 * **Requirement:** The CLI requires specific environment variables to authenticate API requests.
 * **GUI Navigation:** Top-right User Dropdown → **<i class="fa-solid fa-download"></i> OpenStack RC File**.
 * **Result:** Downloads a shell script (e.g., `project-openrc.sh`) containing the required credentials.
 
+:::{admonition} List available resources
+:class: tip
+
+```bash
+openstack flavor list -f table -c ID -c Name -c VCPUs -c RAM
+```
+
+:::
 {% else %}
 
 
@@ -40,8 +48,8 @@ This file must be present in the local environment where the `openstack` CLI is 
 {% endif %}
 
 {% if slide %}
-:::
-:::{grid-item-card}{% else %}###{% endif %} Execution Example
+::::
+::::{grid-item-card}{% else %}###{% endif %} Execution Example
 
 {% if slide %}
 
@@ -64,8 +72,8 @@ openstack server show test_instance -f value -c addresses
 # 4. Cleaning up
 openstack server delete test_instance
 ```
-:::
 ::::
+:::::
 
 {% else %}
 
