@@ -36,7 +36,7 @@ python3 -m pip install ansible-core
 {% endif %}
 
 {% if slide %}
-::::{grid}
+::::{grid} 1 2 2 2
 :gutter: 2
 
 :::{grid-item-card}{% else %}###{% endif %} Playbooks and Execution
