@@ -12,6 +12,4 @@ recapExoHelloWorld/remoteExecution
 introScienceCloud/index
 primerAnsible/index
 swiftObjectStorage/index
-recapHPC/index
-apptainer/index
 ```
