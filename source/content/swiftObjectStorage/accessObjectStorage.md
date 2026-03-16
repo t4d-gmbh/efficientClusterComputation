@@ -6,10 +6,20 @@
 
 Interaction with the object storage REST API requires the gateway URL and a valid authentication token.
 
-::::{grid} 1 2 2 2
+:::{admonition} Internal networking
+:class: tip margin
+On internal netwoks it might be that requests are always routed outwards.
+You can bypass this with:
+```bash
+export no_proxy=$no_proxy,cloud.science-it.uzh.ch
+export NO_PROXY=$NO_PROXY,cloud.science-it.uzh.ch
+```
+:::
+
+:::::{grid} 1 2 2 2
 :gutter: 2
 
-:::{grid-item-card} Manual Inspection
+::::{grid-item-card} Manual Inspection
 
 ```bash
 # Retrieve the Swift endpoint catalog
@@ -17,9 +27,8 @@ openstack catalog show swift
 # Generate a temporary access token
 openstack token issue
 ```
-
-:::
-:::{grid-item-card} Automated Extraction
+::::
+::::{grid-item-card} Automated Extraction
 
 ```bash
 export RGW_URL=$(openstack catalog show swift -f json -c endpoints \
@@ -29,8 +38,8 @@ export RGW_TOKEN=$(openstack token issue -f value -c id)
 
 ```
 
-:::
 ::::
+:::::
 
 {% endif %}
 
