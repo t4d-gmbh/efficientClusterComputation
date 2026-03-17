@@ -52,11 +52,6 @@ curl -X PUT \
      -T myfile.txt \
      "$OS_STORAGE_URL/mycontainer/myfile.txt"
 
-# Download an object
-curl -s -H "X-Auth-Token: $OS_AUTH_TOKEN" \
-     -o myfile.txt \
-     "$OS_STORAGE_URL/mycontainer/myfile.txt"
-
 # Delete an object
 curl -X DELETE \
      -H "X-Auth-Token: $OS_AUTH_TOKEN" \
