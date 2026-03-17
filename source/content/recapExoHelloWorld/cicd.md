@@ -11,6 +11,11 @@ sd_hide_title: true
 - With or without help?
 - What were the challenges?
 :::
+::::{grid} 1 2 2 2
+:gutter: 2
+
+:::{grid-item}
+
 {% raw %}
 ```yaml
 name: Build Apptainer Container
@@ -56,6 +61,12 @@ jobs:
             type=sha,format=short
             # Use the SANITIZED version for the registry tag
             type=raw,value=${{ steps.scm.outputs.tag_version }}
+```
+{% endraw %}
+:::
+:::{grid-item}
+{% raw %}
+```yaml
 
       - name: Setup Apptainer
         uses: eWaterCycle/setup-apptainer@v2
@@ -76,3 +87,5 @@ jobs:
           done
 ```
 {% endraw %}
+:::
+::::

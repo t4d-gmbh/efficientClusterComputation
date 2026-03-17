@@ -2,8 +2,8 @@
 ## Creating a VM via the Web GUI
 
 ```{admonition} <i class="fa-solid fa-display"></i> Hands-on
-:class: warning
-Everyone clicks through the creation of a VM together.
+:class: warning margin
+Click through the creation of a VM.
 ```
 
 ### Steps
@@ -12,7 +12,7 @@ Everyone clicks through the creation of a VM together.
 :gutter: 2
 
 :::{grid-item-card} 1. Launch Instance
-- Navigate to **Compute → Instances → Launch Instance**
+- **Compute → Instances → Launch Instance**
 - Choose a **name** (e.g. `test<username>`)
 - Pick a **boot source** (image: `ubuntu-jammy-22.04`)
   ```{admonition} "Create New Volume"
@@ -24,12 +24,11 @@ Everyone clicks through the creation of a VM together.
 
 :::{grid-item-card} 2. Network & Security
 - Assign to an existing **network** (e.g. `uzh-only`)
-- Configure **Network Ports** (e.g., leave them empty for now)
+- Configure **Network Ports** (e.g., leave empty)
 - Configure **Security Group** (e.g., `default` which opens port 22 for SSH)
 - Add your **SSH key pair**: 
    - Upload your `~/.ssh/mysecret.pub`
    - Key Pair Name: e.g. `mysecret`
-   - Key Type: `SSH Key`
 :::
 
 :::{grid-item-card} 3. Connect
